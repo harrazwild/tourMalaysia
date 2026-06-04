@@ -1,0 +1,886 @@
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px
+        margin 30px; /*modify*/
+        margin-top: 60px;/*modify*/
+
+
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background:#578FCA ;
+        margin: 0 !important;
+        padding: 0!important;
+        display: flex!important;
+        flex-direction: column!important;
+    }
+    .card-wrapper{
+        max-width: 1100px;
+        margin: 0 60px 35px;
+        padding: 20px 10px;
+        overflow: hidden;
+    }
+
+    .card-list .card-item {
+        list-style: none;
+    }
+
+    .card-list .card-item .card-link{
+    user-select: none;
+        display: block;
+        background: hsl(34, 64%, 98%);
+        padding: 18px;
+        border-radius: 12px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        box-shadow: 0 5px 5px rgb(0, 0, 0.05) ;
+        transition: 0.2 ease;
+    }
+    .card-list .card-item .card-link:active{
+        cursor: grabbing;
+    }
+
+    .card-list .card-item .card-link:hover{
+        border-color: #5372F0;
+    }
+
+    .card-list .card-link .card-image{
+        width:100%;  
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .card-list .card-link .badge {
+        color: #F5ECE0;
+        padding: 8px 16px;
+        font-size: 0.95;
+        font-weight: 500;
+        margin:16px 0 18px ; 
+        background-color: #5F99AE;
+        width: fit-content;
+        border-radius: 50px;
+
+    }
+
+    .card-list .card-link .card-title {
+        font-size: 1.19rem;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .card-list .card-link .card-button {
+        height: 50px;
+        width: 20px;
+        color: #5372F0;
+        border-radius: 50%;
+        margin: 30px 0px 5px;
+        background: none;
+        cursor: pointer;
+        border: 2px solid #5372F0;
+        transform: rotate(-45deg);
+    }
+    .card-button {
+        height: 50px;
+        width: 50px;
+        color: #5372F0;
+        border-radius: 50%;
+        background: none;
+        cursor: pointer;
+        border: 2px solid #5372F0;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .card-list .card-link:hover .card-button{
+        color: white;
+        background: #5372F0;
+    }
+    .card-wrapper .swiper-pagination-bullet{
+        height: 13px;
+        width: 13px;
+        opacity: 0.5;
+        background :#5372F0;
+    }
+
+    .card-wrapper .swiper-pagination-bullet-active{
+        opacity: 1;
+    }
+    .card-wrapper .swiper-slide-button{
+        color: #5372F0;
+        margin-top: -35px;
+    }
+
+    @media screen and (max-width:768px) {
+        .card-wrapper{
+            margin: 0 10px 25px;
+
+        }
+        .card-wrapper .swiper-slide-button{
+            display: none;
+        }
+    }
+
+
+    .bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/Untitled\ design2.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1; /* Ensures it stays in the background */
+    }
+
+    .navbar {
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content:left;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        display: inline;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+        color: #5372F0;
+    }
+
+    .logo img {
+        height: 35px;
+        width: auto;
+        margin-right: 15px;
+    }
+
+    .search-container{
+        padding-left: 80px;
+        position: relative;
+        width: 350px;
+    }
+
+    .search-input{
+        width: 100%;
+        height: 25px;
+        border: none;
+        border-radius: 25px;
+        padding: 15px;
+        background: #ecf0f1;
+        padding-left: 50px;
+    }
+
+    .search-input:focus{
+        outline: none;
+        box-shadow: 0 0 15px #2ecc71;
+    }
+
+
+    .bg-attractive1{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/Cameron-Highlands-Wallpaper.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1; /* Ensures it stays in the background */
+    }
+    .bg-attractive2{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/Petronas-Towers-Kuala-Lumpur.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1; /* Ensures it stays in the background */
+    }
+    .bg-attractive3{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/145.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1; /* Ensures it stays in the background */
+    }
+    .bg-attractive4{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/kota-a-famosa-1024x768.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1; /* Ensures it stays in the background */
+    }
+    .bg-attractive5{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/AEn0k_u5ul_jNao6sz3dIK680RwDch-9.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1; /* Ensures it stays in the background */
+    }
+
+    .body-iframe{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5em;
+        color: white;
+    }
+
+    .box{
+        max-width: 600px;
+    }
+    .h1-attraction{
+        font-size: 3em;
+
+    }
+    .p-attraction{
+        font-size: 1.2em;
+    }
+
+    .ifr-attraction{
+        border-radius:2em ;
+        border: none;
+        width: 500px;
+        height: 500px;
+        transition: 0.2s ease-in-out;
+    }
+    .ifr-attraction:hover{
+        transform: scale(1.1);
+        opacity: 1;
+
+    }
+    .btn1{
+        background-color: #ffffff;
+        font-size: 12px;
+        color: #000000;
+        padding: 12px 28px;
+        border-radius: 4px;
+        border: none;
+        transition: 0.2 ease;
+    }
+
+    .btn1:hover{
+        cursor: pointer ;
+        background-color: #333;
+        color: #F5ECE0;
+    }
+
+    .event iframe{
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .containerHome {
+        display: flex;  
+        align-items: center; 
+        justify-content: space-between; 
+        max-width: 1000px; 
+        margin: 30px; /*modify*/
+        margin-top: 110px;/*modify*/
+        padding: 30px;
+        gap: 30px;
+        background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        backdrop-filter: blur(10px); /* Adds a glass effect */
+    }
+
+    .content {
+        flex: 1; /* Takes up available space */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align text to the left */
+        text-align: left;
+        color: rgb(0, 0, 0);
+        margin-bottom: px;
+        justify-content: center;
+    }
+
+    .content h1 {
+        font-size: 50px; /* Increased size */
+        font-weight: 700; /* Bolder text */
+        background-color: #5F99AE;
+        color: #F5ECE0;
+        padding: 10px 20px;
+        border-radius: 50px;
+        letter-spacing: 2px; /* More stylish text */
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    }
+
+    .content p {
+        font-size: 20px; 
+        color: #333; 
+        font-weight: 400; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+        max-width: 600px; 
+        margin-top: 20px; 
+        word-spacing: 15px;
+        position: relative;
+    }
+
+    .bg-home{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/homeWallpaper.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    /* Slider */
+    .slider-home {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        height: 400px; /* Set a height for proper visibility */
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+    }
+
+    .slider-home img {
+        width: 100%;
+        border-radius: 20px; /* Smooth edges */
+        object-fit:cover;
+        height: auto;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .slides-home img:hover {
+        transform: scale(1.1); /* Slightly enlarges the image */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+        z-index: 10; /* Ensures it pops over other elements */
+    }
+
+    .slides-home {
+        display: flex;
+        animation: slide 15s infinite linear;
+        background-size: contain; /* Instead of cover */
+        background-position: center;
+        background-repeat: no-repeat;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Keyframes for automatic sliding */
+    @keyframes slide {
+        0% { transform: translateX(0%); }
+        20% { transform: translateX(0%); }
+        
+        25% { transform: translateX(-100%); }
+        45% { transform: translateX(-100%); }
+        
+        50% { transform: translateX(-200%); }
+        70% { transform: translateX(-200%); }
+        
+        75% { transform: translateX(-300%); }
+        95% { transform: translateX(-300%); }
+        
+        100% { transform: translateX(-400%); }
+    }
+
+    /* CULTURE */
+
+    .bg-culture{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/cultureWallpaper.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    .containerCulture {
+        display: flex;  
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center horizontally */
+        justify-content:flex-start; /* Center vertically */
+        max-width: 1200px;  /* Adjusted width */
+        width: 70%; /* Ensure responsiveness */
+        height: 600px;
+        padding: 30px;
+        gap: 20px;
+        background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        text-align: center; /* Ensures text is centered */
+        overflow: hidden; /* Prevents content from overflowing */
+        margin: 30px;/*modify*/
+        margin-top: 90px;/*modify*/
+
+    }
+
+    .containerswiperCulture{
+        margin-top: 30px;
+    }
+
+    .contentCulture h1{
+        font-size: 50px; /* Increased size */
+        font-weight: 700; /* Bolder text */
+        color: #000000;
+    }
+
+    .bannerCulture {
+        position: relative; /* Keeps images inside this container */
+        width: 1505px; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+        overflow: hidden;
+    }
+
+    .fade-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        position: absolute; /* Stays inside .bannerCulture */
+        top: 0; 
+        left: 0;
+        animation: fadeEffect 9s infinite;
+    }
+
+    .fade-img:nth-child(1) { animation-delay: 0s; }
+    .fade-img:nth-child(2) { animation-delay: 3s; }
+    .fade-img:nth-child(3) { animation-delay: 9s; }
+
+    @keyframes fadeEffect {
+        0% { opacity: 0; }
+        33% { opacity: 1; }
+        66% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
+    .card-list-culture {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between cards */
+        flex-wrap: wrap; /* Ensures responsiveness */
+    }
+    
+    .card-item-culture {
+        width: 280px;
+        height: auto;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+        background: rgba(255, 255, 255, 0.8);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .card-item-culture:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-image-culture {
+        width: 100%; /* Makes sure images fit inside the card */
+        height: 180px; /* Adjust this value to control image height */
+        object-fit: cover; /* Ensures images don't stretch */
+    }
+    
+    .card-title-culture {
+        color: #F5ECE0;
+        padding: 8px 16px;
+        font-size: 0.95rem; /* Fixed font size */
+        font-weight: 500;
+        margin: 5px auto; /* Centers the element horizontally */
+        background-color: #5F99AE;
+        width: fit-content; /* Keeps the width snug to content */
+        border-radius: 50px;
+        display: block; /* Ensures proper centering */
+        text-align: center; /* Centers text inside */
+    }
+
+    .card-item-culture a {
+        text-decoration: none !important;
+        color: inherit; /* Keeps the text color */
+    }
+
+    /* FESTIVAL CULTURE */
+
+    .bg-festival{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/culturefestival.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    .bg-food{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/culturefood.jpg') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    /*contact , event and footer*/
+
+    .contact{
+        min-height: 100vh;
+        padding: 50px;
+        text-align: center;
+    }
+    
+    .containerC{
+        max-width: 800px;
+        margin: 0 auto;
+        border: 4px solid #ffffff; /* Border around the entire section */
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners */
+        background-color: transparent;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    
+    .containerC h2{
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: white;
+    }
+    
+    .contact-wrapper{ /*splitkan textbox area and contact information area*/
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    
+    .contact-form{
+        text-align: left;
+    }
+    
+    .contact-form h3{
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .form-group{
+        margin-bottom: 20px;
+    }
+    
+    input, textarea{ /*besarkan size textbox and letak border also tambahkan background color and color*/
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        background-color: #f8f9fa;
+        color:#333
+    }
+    
+    input:focus, /*untuk edit bahagian textbox untuk tambakan outline kt box tu*/
+    textarea:focus{
+        outline: none;
+        box-shadow: 0 0 8px #bbb; 
+    }
+    
+    button{
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #68d3f7;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    button:hover{ /*gelapkan sikit button bile kite hover */
+        background-color: #3674B5;
+    }
+    
+    .contact-info{
+        text-align: left;
+    }
+    
+    .contact-info h3{
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+    
+    .contact-info p{
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+    
+    .contact-info i{
+        color: #ffffff;
+        margin-right: 10px;
+    }
+    
+    @media screen and (max-width: 768px){ /*untuk adjust tab size bile kite kecilkan atau besarkan tab tersebut (more to nak flexible kan screen size)*/
+        .containerC{
+            padding: 20px;
+        }
+        .contact-wrapper{ 
+            grid-template-columns: 1fr;
+            
+        }
+    }
+   
+
+    /*event code*/
+    .news-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 900px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    
+    .news-card {
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .news-card img {
+        width: 40%;
+        object-fit: cover;
+    }
+    
+    .news-content {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .news-content h3 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+    }
+    
+    .news-content p {
+        font-size: 14px;
+        color: #666;
+    }
+    
+    @media (max-width: 768px) {
+        .news-container {
+            grid-template-columns: 1fr;
+        }
+    
+        .news-card {
+            flex-direction: column;
+        }
+    
+        .news-card img {
+            width: 100%;
+            height: 180px;
+        }
+    }
+
+    .happenings {
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(229, 229, 229);
+        margin-bottom: 20px;
+        
+    }
+    
+    .happenings::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px; /* Adjust the distance of the underline */
+        width: 0;
+        height: 3px;
+        background-color: brown; /* Color of the underline */
+        transition: width 0.3s ease-in-out;
+    }
+    
+    .happenings:hover::after {
+        width: 100%;
+    }
+
+    @keyframes wave {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0); }
+    }
+    
+    .title-event{
+        margin-top: 90px;
+        margin-bottom: 50px;
+        opacity: 0.1;
+        transition: opacity 0.4s ease-in-out;
+    }
+    .title-event:hover{
+        opacity: 1;
+        animation: wave 1s infinite ease-in-out;
+    }
+
+     .bg-event{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('image/eventbg.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    .news-content a{
+        text-decoration: none;
+    }
+    
+    /*footer*/
+   footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding-top: 20px;
+        width: 100%;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    .footer-section {
+        flex: 1;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .footer-section h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .footer-section p,
+    .footer-section ul {
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 7px;
+        list-style: none;
+        text-align: center;
+        width: 210px;
+        margin: auto;
+    }
+    
+    .footer-section ul li {
+        margin: 5px 0;
+    }
+    
+    .footer-section ul li a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+    
+    .footer-section ul li a:hover {
+        color: #ffcc00;
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+        background-color: #e67e22;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+
+    } /* Social Icons */
+    .social-icons a {
+        color: white;
+        font-size: 20px;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: 0.3s;
+    
+    }
+    .social-icons{
+        text-align: center;
+    }
+    
+    .social-icons a:hover {
+        color: #ffcc00;
+    }
